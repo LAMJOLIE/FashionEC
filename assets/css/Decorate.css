@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: Arial, Helvetica, sans-serif,sans-serif; */
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 300px;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* overflow-x: hidden; */
+}
+
+/* CSS for Navbar*/
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 80%;
+    height: 80%;
+}
+
+
+
+
+/* .menu-bar{
+    background: black;
+    text-align: center;
+}
+
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color:#fff;
+}
+
+.menu-bar ul li{
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a{
+    color: white;
+    font-weight: bold;
+} */
+
+/* --------------Catergory Bar Starts--------------*/
+
+/*カテゴリーの実装*/
+.category__wrap {
+    width: 100%;
+    margin: 0 auto;
+    z-index: 2;
+    position: absolute;
+  }
+  
+  .category__lists {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+  
+  .category__list {
+    list-style-type: none;
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    position: relative;
+    transition: all .3s;
+  }
+  
+  .category__list:hover {
+    background-color: #808080;
+  }
+  
+  .category__list:hover::before {
+    background-color: #0071BB;
+  }
+  
+  .category__list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    transition: all .3s;
+  }
+  
+  .category__list:hover a {
+    color: #fff;
+  }
+  
+  /*------ドロップダウン------*/
+  
+  /*ドロップダウン表示*/
+  .dropdown_lists {
+    display: none;
+    /*デフォルトでは非表示の状態にしておく*/
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  /*ホバーしたら表示*/
+  .category__list:hover .dropdown_lists {
+    display: block;
+  }
+  
+  .dropdown_list {
+    list-style-type: none;
+    background-color: #000;
+    height: 60px;
+    transition: all .3s;
+    position: relative;
+  }
+  
+  .dropdown_list:not(:first-child)::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .dropdown_list:hover {
+    background-color: #808080;
+  }
+  
+  .dropdown_list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .dropdown_list a::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(135deg);
+    position: absolute;
+    right: 15px;
+    top: calc(50% - 5px);
+  }
+
+/* --------------Catergory Bar ends --------------*/
+/* Search Overlap page CSS  starts*/
+    .full-screen{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      z-index: 10;
+    }
+
+    .flex-container-center{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hidden{
+      display: none;
+    }
+    .searchTitle{
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+
+    .searchbtn-close{
+      position: absolute;
+      top:0;
+      right: 22px;
+      font-size: 36px;
+      margin-left: 50px;
+      color:#fff;
+      font-size: 80px;
+    }
+
+    .searchBarForm .search-send-button{
+      color: red;
+
+    }
+
+/* Search Overlap page CSS ends */
+.navbar{
+    overflow: hidden;
+    height: 63px;
+}
+
+.navbar .open-slide a{
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a{
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    padding-top: 8px;
+}
+
+
+.navbar ul{
+    padding: 8px 0 0 0;
+    list-style: none;
+}
+
+
+.side-nav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.side-nav a {
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #ccc;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover{
+    color:#fff;
+}
+
+.side-nav .btn-close{
+    position: absolute;
+    top:0;
+    right: 22px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.navbar-nav{
+    display:flex;
+    text-align: right;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.navbar-nav a{
+  color: black;
+}
+
+
+/* CSS for Footer*/
+.footer{
+    background-color: darkgray;
+    color: white;
+    padding-top: 30px;
+}
+
+.footerbar{
+  display: flex;
+  padding-bottom: 30px;
+}
+
+.info-list{
+  padding-left: 50px;
+  list-style-type: none;
+}
+
+.info-list ul{
+  list-style: none;
+}
+
+.info-list a{
+  color: white;
+}
+
+.footer-category {
+  padding-left: 100px;
+}
+
+.footer-category ul{
+  list-style: none;
+}
+
+.footer-category a{
+  color: white;
+}
+
+.media-select{
+  margin-left: 400px;
+}
+
+.media-select ul{
+  display: flex;
+  list-style: none;
+}
+
+.media-select a{
+  padding: 20px;
+  color: white;
+}
+
+
+.wrapper{
+    text-align: center;
+}
